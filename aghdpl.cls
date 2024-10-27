@@ -9,15 +9,13 @@
 % 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\message{*** [aghdpl.cls] ---  (PK, GJN, MSz)  v4.0 <2020-11-03>  ***}       
-
 \newif\ifpdflatex\pdflatexfalse
 \NeedsTeXFormat{LaTeX2e} % 
 \ProvidesClass{aghdpl} 
 
 \RequirePackage{kvoptions}
 
-\DeclareStringOption[pl]{language}
+\DeclareStringOption[en]{language}
 \ProcessKeyvalOptions*
 
 \DeclareOption{pdflatex}{\pdflatextrue}
@@ -28,7 +26,7 @@
 
 \show\aghdpl@language
 
-\newcommand{\ThesisLanguage}{pl}
+\newcommand{\ThesisLanguage}{en}
 \IfStrEqCase{\aghdpl@language}{%
 	{en}{\renewcommand{\ThesisLanguage}{en}}%
 	{pl}{\renewcommand{\ThesisLanguage}{pl}}%
@@ -41,10 +39,10 @@
 
 % Lista wszystkich języków stanowiących języki pozycji bibliograficznych użytych w pracy.
 % (Zgodnie z zasadami tworzenia bibliografii każda pozycja powinna zostać utworzona zgodnie z zasadami języka, w którym dana publikacja została napisana.)
-\RequirePackage[english,polish]{babel}
+\RequirePackage[polish, english]{babel}
 
 % Użyj polskiego łamania wyrazów (zamiast domyślnego angielskiego).
-\RequirePackage{polski}
+% \RequirePackage{polski}
 
 % Użyj kodowania UTF-8.
 \RequirePackage[utf8]{inputenc}
@@ -250,7 +248,6 @@
 % =============================================================================
 % SEC:   Ustawienia generowania spisu treści i spisu rysunków
 % =============================================================================
-
 \RequirePackage{hyperref} % Clickable Table of contents
 \renewcommand{\cfttoctitlefont}{\bfseries\Large}
 \renewcommand{\cftbeforetoctitleskip}{20mm}
@@ -404,10 +401,10 @@
 	}
 }
 
-\AtBeginDocument{
-	\renewcommand{\tablename}{Tabela}
-	\renewcommand{\figurename}{Rys.}
-}
+% \AtBeginDocument{
+	% \renewcommand{\tablename}{Tabela}
+	% \renewcommand{\figurename}{Rys.}
+% }
 
 % =============================================================================
 % SEC:   Niestandardowe środowiska
