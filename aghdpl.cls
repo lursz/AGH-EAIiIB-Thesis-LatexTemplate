@@ -132,7 +132,7 @@
 	\begin{center}
 		\vspace*{1.5cm}
 		
-		\includegraphics[scale=0.6]{src/img/common/agh}
+		\includegraphics[scale=0.6]{img/common/agh}
 		
 		\vspace*{2mm}
 		{
